@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { FaArrowRight } from 'react-icons/fa6';
+import { FaArrowRight } from "react-icons/fa6";
 
 const highlights = [
   {
@@ -24,15 +24,18 @@ const highlights = [
 const milestones = [
   {
     title: "Previous project",
-    detail: "Researched the impact AI student monitoring tools in schools, reached out to over 700 students, parents, staff, and teachers.",
+    detail:
+      "Researched the impact AI student monitoring tools in schools, reached out to over 700 students, parents, staff, and teachers.",
   },
   {
     title: "Currently exploring",
-    detail: "The impacts of social media and AI on high school students critical thinking skills.",
+    detail:
+      "The impacts of social media and AI on high school students critical thinking skills.",
   },
   {
     title: "Next up",
-    detail: "Learn about machine learning and hardware to build even cooler projects.",
+    detail:
+      "Learn about machine learning and hardware to build even cooler projects.",
   },
 ];
 
@@ -66,7 +69,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-fuchsia-400 to-sky-400 px-5 py-2.5 text-slate-900 font-semibold shadow-lg shadow-amber-300/20 transition hover:-translate-y-0.5 hover:shadow-amber-200/40"
               >
                 See projects
-                <span className="text-base">-{">"}</span>
+                <FaArrowRight />
               </Link>
               <Link
                 href="/about"
@@ -105,13 +108,13 @@ export default function Home() {
                 <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                   <p className="text-sm text-slate-300">Recent focus</p>
                   <p className="text-2xl font-semibold text-white">
-                    Simulations, sensor data, and front-end polish
+                    Next.js websites, STEM research, data science.
                   </p>
                 </div>
                 <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                   <p className="text-sm text-slate-300">Collaboration</p>
                   <p className="text-2xl font-semibold text-white">
-                    Mentoring classmates, sharing code, writing docs
+                    Collaborate with teammates and experts. 
                   </p>
                 </div>
               </div>
@@ -136,8 +139,8 @@ export default function Home() {
               href="/about"
               className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 transition hover:text-white"
             >
-              Dive into my story
-              <span className="text-base">-{">"}</span>
+              Learn about me
+              <FaArrowRight />
             </Link>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -172,27 +175,35 @@ export default function Home() {
         <section className="grid gap-6 rounded-3xl bg-slate-900/80 p-6 ring-1 ring-white/10 backdrop-blur lg:grid-cols-[1fr_1.1fr]">
           <div className="space-y-4">
             <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
-              Momentum
+              Projects
             </p>
             <h2 className="text-3xl font-semibold text-white">
               Building in public and sharing progress
             </h2>
             <p className="text-slate-200/80">
-              I write down what I learn, ship updates quickly, and keep feedback
-              loops open. Each project moves from sketch to prototype to
-              polished release with clear documentation.
+              I try my best to learn as much as I can. Then I put that knowledge
+              to use by building and completing projects.
             </p>
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 transition hover:text-white"
+            >
+              View all projects
+              <FaArrowRight />
+            </Link>
             <div className="flex flex-wrap gap-3">
-              {["Weekly checkpoints", "Documented decisions", "Open to feedback"].map(
-                (chip) => (
-                  <span
-                    key={chip}
-                    className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"
-                  >
-                    {chip}
-                  </span>
-                )
-              )}
+              {[
+                "Weekly checkpoints",
+                "Documented decisions",
+                "Open to feedback",
+              ].map((chip) => (
+                <span
+                  key={chip}
+                  className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"
+                >
+                  {chip}
+                </span>
+              ))}
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">

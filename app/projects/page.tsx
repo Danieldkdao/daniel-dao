@@ -1,35 +1,55 @@
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { FaArrowRight, FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const projects = [
   {
-    title: "STEM Research Portal",
+    title: "Social Media and AI study",
     summary:
-      "A hub for classmates to upload experiments, visualize results, and share commentary with mentors.",
-    stack: ["Next.js", "TypeScript", "Charts"],
-    status: "Live prototype",
-  },
-  {
-    title: "Environmental Sensor Dashboard",
-    summary:
-      "Collects local readings, cleans the data, and displays trends with alerts for outliers or anomalies.",
-    stack: ["APIs", "Data viz", "Automation"],
-    status: "In testing",
-  },
-  {
-    title: "Robotics Playbook",
-    summary:
-      "Interactive notebook of wiring diagrams, drive code snippets, and build logs for team handoffs.",
-    stack: ["Documentation", "UI/UX", "Collaboration"],
+      "Conducting an international study to determine and learn about the effects of social media and AI on high school students' critical thinking.",
+    stack: ["STEM", "Research", "Collaboration"],
     status: "In progress",
+    link: null,
   },
   {
-    title: "Study Sprint Scheduler",
+    title: "Math Puzzle App",
     summary:
-      "Micro-planning tool to break research tasks into sprints, track effort, and surface blockers early.",
-    stack: ["Next.js", "Planning", "Accessibility"],
-    status: "Shipped",
+      "Fun web app where users can solve creative math puzzles, chat with AI, and reach out to the community.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    status: "In progress",
+    link: null,
+  },
+  {
+    title: "Entrepreneurship Challenge",
+    summary: `Proposed business idea "Don't Panic AI Tutors" to teach people about AI. Received the highest award at the Kansas Entrepreneurship Challenge.`,
+    stack: ["Business", "Communication", "AI"],
+    status: "In progess",
+    link: "https://www.instagram.com/p/DIuW7ueyE9U/",
+  },
+  {
+    title: "Website for local Tennis Team",
+    summary:
+      "Created a website for the local high school tennis team with authentication, blogs, players, and more.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    status: "Completed",
+    link: "https://free-state-tennis-official.vercel.app",
+  },
+  {
+    title: "AI Student Monitoring Study",
+    summary:
+      "Studied and researched the impacts of AI student monitoring in schools. Reached out to many members in the community and uncovered diverse perspectives.",
+    stack: ["Excel", "Planning", "Collaboration"],
+    status: "Completed",
+    link: "https://ecybermission.com",
+  },
+  {
+    title: "AI STEM Research Project",
+    summary:
+      "Explored the perceptions and accuracy of generative AI tools such as ChatGPT, Gemini, and Claude.",
+    stack: ["STEM", "Research", "AI"],
+    status: "Completed",
+    link: "https://lawrencekstimes.com/2024/07/24/lvs-national-stem-competition/",
   },
 ];
 
@@ -46,12 +66,12 @@ export default function Projects() {
             <span className="bg-linear-to-r from-amber-300 via-fuchsia-300 to-sky-300 bg-clip-text text-transparent">
               Building, iterating, and sharing
             </span>{" "}
-            to make ideas tangible.
+            ideas that help and improve.
           </h1>
           <p className="text-lg text-slate-200/80">
             I like projects that solve a clear problem, include measurable
-            outcomes, and feel great to use. Here are a few I am refining and
-            releasing.
+            outcomes, and feel great to use. Here are a few I have done in the
+            past and currently working on.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -59,7 +79,7 @@ export default function Projects() {
               className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-fuchsia-400 to-sky-400 px-5 py-2.5 text-slate-900 font-semibold shadow-lg shadow-amber-300/20 transition hover:-translate-y-0.5 hover:shadow-amber-200/40"
             >
               Collaborate with me
-              <span className="text-base">-{">"}</span>
+              <FaArrowRight />
             </Link>
             <Link
               href="/about"
@@ -84,9 +104,14 @@ export default function Projects() {
                   <h3 className="text-2xl font-semibold text-white">
                     {project.title}
                   </h3>
-                  <span className="rounded-full bg-amber-300/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-amber-100 ring-1 ring-amber-200/30">
-                    {project.status}
-                  </span>
+                  <div className="flex gap-2">
+                    <span className="rounded-full bg-amber-300/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-amber-100 ring-1 ring-amber-200/30 whitespace-nowrap">
+                      {project.status}
+                    </span>
+                    {project.link && <Link href={project.link} className="rounded-full bg-amber-300/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-amber-100 ring-1 ring-amber-200/30 flex items-center justify-center">
+                      <FaArrowUpRightFromSquare />
+                    </Link>}
+                  </div>
                 </div>
                 <p className="text-sm text-slate-200/80 leading-relaxed">
                   {project.summary}
@@ -104,53 +129,6 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </section>
-
-        <section className="grid gap-6 rounded-3xl bg-slate-900/80 p-6 ring-1 ring-white/10 backdrop-blur lg:grid-cols-[1fr_1fr]">
-          <div className="space-y-3">
-            <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
-              How I ship
-            </p>
-            <h2 className="text-3xl font-semibold text-white">
-              Intentional process, polished results
-            </h2>
-            <p className="text-slate-200/80">
-              Each project follows a simple loop: define the problem, sketch
-              flows, validate with quick prototypes, and ship with docs so
-              others can build on it.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "User-centered UX",
-                "Fast iterations",
-                "Documented decisions",
-                "Accessibility-first",
-              ].map((pill) => (
-                <span
-                  key={pill}
-                  className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"
-                >
-                  {pill}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="space-y-4">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 ring-1 ring-white/10">
-              <p className="text-sm text-slate-300">What I am testing</p>
-              <p className="text-xl font-semibold text-white">
-                Combining simulations with real-world measurements to guide
-                design choices.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 ring-1 ring-white/10">
-              <p className="text-sm text-slate-300">What comes next</p>
-              <p className="text-xl font-semibold text-white">
-                Packaging starter kits so classmates can launch their own tools
-                faster.
-              </p>
-            </div>
-          </div>
         </section>
       </main>
       <Footer />

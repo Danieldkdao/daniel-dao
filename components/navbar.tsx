@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
+import { FaArrowRight } from 'react-icons/fa6';
 
 const Navbar = () => {
   return (
@@ -59,7 +60,7 @@ const Navbar = () => {
           className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-fuchsia-400 to-sky-400 px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:shadow-amber-200/40 md:ml-4"
         >
           View projects
-          <span className="text-lg">-{">"}</span>
+          <FaArrowRight />
         </Link>
       </nav>
     </header>

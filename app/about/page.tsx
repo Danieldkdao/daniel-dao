@@ -1,25 +1,26 @@
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { FaArrowRight } from "react-icons/fa6";
 
 const experiences = [
   {
     period: "2025",
-    title: "Research lead",
+    title: "Programming and more STEM",
     detail:
-      "Designing experiments for STEM competitions, running trials, and turning results into interactive dashboards.",
+      "Learned about web technologies such as Next.js, Tailwind CSS, and TypeScript. Continued STEM research with an international study.",
   },
   {
     period: "2024",
-    title: "Full-stack builder",
+    title: "Conducted in-person surveys",
     detail:
-      "Shipped web tools in Next.js, integrated APIs, and focused on accessibility and speed for student teams.",
+      "Researched the impacts of digital AI student monitoring tools in school. Reached out to many members in the community, in-person.",
   },
   {
     period: "2023",
-    title: "Community collaborator",
+    title: "First introduction to STEM",
     detail:
-      "Helped classmates debug projects, wrote clear documentation, and organized study groups for STEM courses.",
+      "Completed a research project studying the perceptions and impacts of generative AI tools like ChatGPT, Gemini, and Claude.",
   },
 ];
 
@@ -52,10 +53,10 @@ export default function About() {
               focused on making ideas real.
             </h1>
             <p className="text-lg text-slate-200/80">
-              I thrive at the intersection of curiosity and execution. Whether
-              it is designing research protocols, coding interfaces, or
-              facilitating group work, I want the result to be useful and easy
-              to understand.
+              I enjoy exploring the intersection of curiosity and execution.
+              Whether it is designing research protocols, coding interfaces, or
+              facilitating group work, I try my best to make the result
+              something to be proud of.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -63,7 +64,7 @@ export default function About() {
                 className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-fuchsia-400 to-sky-400 px-5 py-2.5 text-slate-900 font-semibold shadow-lg shadow-amber-300/20 transition hover:-translate-y-0.5 hover:shadow-amber-200/40"
               >
                 Explore projects
-                <span className="text-base">-{">"}</span>
+                <FaArrowRight />
               </Link>
               <Link
                 href="/contact"
@@ -88,13 +89,13 @@ export default function About() {
                 <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                   <p className="text-sm text-slate-300">Interests</p>
                   <p className="text-xl font-semibold text-white">
-                    Robotics, environmental science, UI design
+                    Programming, STEM, reseach
                   </p>
                 </div>
               </div>
               <div className="rounded-2xl border border-amber-200/40 bg-linear-to-r from-amber-300/15 via-fuchsia-400/15 to-sky-400/15 p-4 text-sm text-amber-100 ring-1 ring-white/10">
-                I value clarity: clear documentation, clear visuals, and clear
-                next steps so teammates can contribute quickly.
+                I value self-driven solutions. Ways to tackle problems that I
+                come up with and execute.
               </div>
             </div>
           </div>
@@ -109,9 +110,9 @@ export default function About() {
               How I build and learn
             </h2>
             <p className="text-slate-200/80">
-              Each year I set a theme for what I want to improve. That pattern
-              keeps me experimenting, sharing, and documenting progress with
-              others.
+              Each year I have learned countless new things, whether it be
+              building APIs to conducting literature reviews on complex topics.
+              Here are some of my favorite highlights from recent years.
             </p>
           </div>
           <div className="grid gap-4">
@@ -149,7 +150,7 @@ export default function About() {
               className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 transition hover:text-white"
             >
               See them in action
-              <span className="text-base">-{">"}</span>
+              <FaArrowRight />
             </Link>
           </div>
           <div className="grid gap-3 rounded-3xl bg-white/5 p-5 ring-1 ring-white/10 sm:grid-cols-3">
