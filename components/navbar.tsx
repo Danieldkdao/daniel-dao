@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="absolute -right-10 top-10 h-32 w-32 bg-sky-400 opacity-20 blur-2xl" />
         <div className="absolute bottom-0 left-1/2 h-28 w-28 -translate-x-1/2 bg-amber-300 opacity-20 blur-2xl" />
       </div>
-      <nav className="relative mx-auto flex max-w-6xl items-center gap-6 rounded-2xl bg-slate-900/85 px-5 py-4 text-white shadow-2xl ring-1 ring-white/10 backdrop-blur">
+      <nav className="relative mx-auto flex max-w-6xl items-center gap-6 rounded-2xl bg-slate-900/65 px-5 py-4 text-white shadow-2xl ring-1 ring-white/10 backdrop-blur-xl">
         <div className="flex items-center gap-3">
           <div className="rounded-xl bg-white/10 p-2 ring-1 ring-white/5">
             <Image

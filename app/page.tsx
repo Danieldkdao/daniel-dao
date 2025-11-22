@@ -7,7 +7,7 @@ const highlights = [
   {
     title: "Curiosity-first research",
     body: "I love digging into problems, from writing simulations to running lab-style experiments that reveal real-world patterns.",
-    tags: ["Modeling", "Experimentation", "Data storytelling"],
+    tags: ["Research", "Experimentation", "Data storytelling"],
   },
   {
     title: "Full-stack builds",
@@ -16,7 +16,7 @@ const highlights = [
   },
   {
     title: "Impact-driven mindset",
-    body: "Every project is tied to a question that matters. I measure, iterate, and share what I learn.",
+    body: "Every project is tied to a topic I am truly passionate about. I measure, iterate, and share what I learn.",
     tags: ["Metrics", "Writing", "Collaboration"],
   },
 ];

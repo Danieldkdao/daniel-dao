@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="absolute right-0 top-0 h-36 w-36 bg-sky-400 opacity-25 blur-2xl" />
         <div className="absolute left-1/2 top-6 h-24 w-24 -translate-x-1/2 bg-amber-300 opacity-20 blur-2xl" />
       </div>
-      <div className="relative mx-auto grid max-w-6xl gap-10 rounded-3xl bg-slate-900/90 px-8 py-10 text-white shadow-2xl ring-1 ring-white/10 backdrop-blur md:grid-cols-3">
+      <div className="relative mx-auto grid max-w-6xl gap-10 rounded-3xl bg-slate-900/65 px-8 py-10 text-white shadow-2xl ring-1 ring-white/10 backdrop-blur-xl md:grid-cols-3">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <div className="rounded-xl bg-white/10 p-2 ring-1 ring-white/5">
