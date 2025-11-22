@@ -1,9 +1,10 @@
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 import Logo from "@/public/logo.png";
 
 const Navbar = () => {
   return (
-    <header className="relative w-full px-6 pt-6">
+    <header className="relative w-full px-6 py-6">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -left-20 top-0 h-48 w-48 rotate-12 bg-linear-to-br from-amber-400 via-fuchsia-500 to-sky-500 opacity-30 blur-3xl" />
         <div className="absolute -right-10 top-10 h-32 w-32 bg-sky-400 opacity-20 blur-2xl" />
@@ -28,41 +29,41 @@ const Navbar = () => {
           </div>
         </div>
         <div className="ml-auto hidden items-center gap-8 text-sm font-semibold md:flex">
-          <a
-            href="#home"
+          <Link
+            href="/"
             className="transition hover:text-amber-300 hover:drop-shadow-[0_0_12px_rgba(253,230,138,0.6)]"
           >
             Home
-          </a>
-          <a
-            href="#about"
+          </Link>
+          <Link
+            href="/about"
             className="transition hover:text-amber-300 hover:drop-shadow-[0_0_12px_rgba(253,230,138,0.6)]"
           >
             About
-          </a>
-          <a
-            href="#survey"
+          </Link>
+          <Link
+            href="/projects"
             className="transition hover:text-amber-300 hover:drop-shadow-[0_0_12px_rgba(253,230,138,0.6)]"
           >
             Projects
-          </a>
-          <a
-            href="#survey"
+          </Link>
+          <Link
+            href="/contact"
             className="transition hover:text-amber-300 hover:drop-shadow-[0_0_12px_rgba(253,230,138,0.6)]"
           >
             Contact
-          </a>
+          </Link>
         </div>
-        <a
-          href="#survey"
+        <Link
+          href="/projects"
           className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-fuchsia-400 to-sky-400 px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:shadow-amber-200/40 md:ml-4"
         >
-          Take the Survey
-          <span className="text-lg">→</span>
-        </a>
+          View projects
+          <span className="text-lg">-{">"}</span>
+        </Link>
       </nav>
     </header>
   );
 };
 
-export default Navbar
+export default Navbar;

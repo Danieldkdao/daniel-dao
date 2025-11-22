@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
 
@@ -25,49 +26,51 @@ const Footer = () => {
               <p className="text-xs uppercase tracking-[0.2em] text-slate-300">
                 Daniel Dao
               </p>
-              <p className="text-lg font-semibold text-white">Official Website</p>
+              <p className="text-lg font-semibold text-white">
+                Official Website
+              </p>
             </div>
           </div>
           <p className="max-w-sm text-sm text-slate-200/90">
-            Exploring bold ideas for the future. Thank you for visiting—your
-            feedback helps shape what comes next.
+            Exploring bold ideas for the future. Thanks for visiting - your
+            feedback shapes what I build next.
           </p>
-          <a
-            href="#survey"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-fuchsia-400 to-sky-400 px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:shadow-amber-200/40"
           >
-            Take the Survey
-            <span className="text-lg">→</span>
-          </a>
+            Say hello
+            <span className="text-lg">-{">"}</span>
+          </Link>
         </div>
         <div className="space-y-2 text-sm">
           <p className="text-xs uppercase tracking-[0.2em] text-slate-300">
             Navigation
           </p>
-          <a
-            href="#home"
+          <Link
+            href="/"
             className="block rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-amber-300"
           >
             Home
-          </a>
-          <a
-            href="#about"
+          </Link>
+          <Link
+            href="/about"
             className="block rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-amber-300"
           >
             About
-          </a>
-          <a
-            href="#survey"
+          </Link>
+          <Link
+            href="/projects"
             className="block rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-amber-300"
           >
             Projects
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/contact"
             className="block rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-amber-300"
           >
             Contact
-          </a>
+          </Link>
         </div>
         <div className="space-y-2 text-sm">
           <p className="text-xs uppercase tracking-[0.2em] text-slate-300">
@@ -81,7 +84,7 @@ const Footer = () => {
             10214581@students.usd497.org
           </a>
           <div className="pt-2 text-xs text-slate-400">
-            © 2025 Daniel Dao. All rights reserved.
+            (c) 2025 Daniel Dao. All rights reserved.
           </div>
         </div>
       </div>
